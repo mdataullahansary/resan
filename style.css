@@ -1,0 +1,81 @@
+
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+background-color: #fafafa;
+}
+.drag-area {
+border: 2px dashed #d1d5db;
+transition: all 0.3s ease;
+}
+.drag-area.active {
+border-color: #6366f1;
+background-color: rgba(99, 102, 241, 0.05);
+}
+.progress-circle {
+position: relative;
+width: 120px;
+height: 120px;
+}
+.progress-circle svg {
+transform: rotate(-90deg);
+}
+.progress-circle circle {
+fill: none;
+stroke-width: 8;
+stroke-linecap: round;
+}
+.progress-bg {
+stroke: #e5e7eb;
+}
+.progress-bar {
+stroke: #6366f1;
+transition: stroke-dashoffset 0.5s ease;
+}
+input[type="file"] {
+display: none;
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 48px;
+height: 24px;
+}
+.custom-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #e5e7eb;
+transition: .3s;
+border-radius: 24px;
+}
+.slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .3s;
+border-radius: 50%;
+}
+input:checked + .slider {
+background-color: #6366f1;
+}
+input:checked + .slider:before {
+transform: translateX(24px);
+}
+.hero-section {
+background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 0.8) 70%, rgba(255, 255, 255, 0.6) 80%, rgba(255, 255, 255, 0.4) 90%, rgba(255, 255, 255, 0.2) 95%), url('https://readdy.ai/api/search-image?query=A%20professional%20and%20modern%20workspace%20with%20a%20clean%20desk%2C%20a%20laptop%2C%20resume%20papers%2C%20and%20subtle%20office%20elements.%20The%20left%20side%20has%20a%20clean%20white%20background%20that%20gradually%20transitions%20to%20the%20right%20where%20the%20office%20scene%20is%20visible.%20The%20image%20has%20soft%20lighting%2C%20muted%20colors%2C%20and%20a%20minimalist%20aesthetic%20perfect%20for%20a%20resume%20analysis%20application.%20The%20transition%20from%20white%20to%20image%20must%20be%20seamless%20and%20natural.&width=1200&height=600&seq=123456&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
